@@ -40,6 +40,20 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') goTo(current - 1);
 });
 
+// swipe support for touch devices
+let touchStartX = 0;
+document.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+document.addEventListener('touchend', (e) => {
+  const touchEndX = e.changedTouches[0].screenX;
+  const diff = touchStartX - touchEndX;
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) goTo(current + 1);
+    else goTo(current - 1);
+  }
+}, { passive: true });
+
 // Enter button: starts music (continuous background playback) and moves to page 1
 enterBtn.addEventListener('click', () => {
   bgm.volume = 0.7;
@@ -53,20 +67,3 @@ soundToggle.addEventListener('click', () => {
   iconOn.style.display = bgm.muted ? 'none' : 'block';
   iconOff.style.display = bgm.muted ? 'block' : 'none';
 });
-
-// ---- Desktop-only check ----
-function checkDevice() {
-  const isNarrow = window.innerWidth < 900;
-  const isTouchPrimary = window.matchMedia('(pointer: coarse)').matches;
-  const site = document.getElementById('site');
-  const popup = document.getElementById('mobile-popup');
-  if (isNarrow || isTouchPrimary) {
-    site.style.display = 'none';
-    popup.style.display = 'flex';
-  } else {
-    popup.style.display = 'none';
-    site.style.display = 'block';
-  }
-}
-checkDevice();
-window.addEventListener('resize', checkDevice);
