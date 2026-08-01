@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Friendship Day, Neel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MOBILE GATE -->
+  <div id="mobile-gate">
+    <svg class="gate-heart" viewBox="0 0 100 100" width="70" height="70">
+      <path d="M50 85 C20 65, 5 45, 5 28 C5 12, 20 5, 32 12 C40 17, 46 24, 50 30 C54 24, 60 17, 68 12 C80 5, 95 12, 95 28 C95 45, 80 65, 50 85 Z"
+        fill="none" stroke="#F4C95D" stroke-width="3" stroke-dasharray="6 6"/>
+    </svg>
+    <h1>This one's for a laptop, Neel.</h1>
+    <p>Some things are better with a bigger screen and two hands on the keyboard.<br>Open this on your laptop 💻</p>
+  </div>
+
+  <!-- MAIN SITE -->
+  <div id="site">
+
+    <!-- HERO -->
+    <section class="hero">
+      <svg class="thread-doodle" viewBox="0 0 800 120" preserveAspectRatio="none">
+        <path id="thread-hero" d="M0,60 C150,10 250,110 400,60 C550,10 650,110 800,60" fill="none" stroke="#FF6F59" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <p class="eyebrow">a small surprise, strung together with thread</p>
+      <h1 class="headline">Happy Friendship<br>Day, Neel</h1>
+      <p class="subhead">Five photos. One letter. A song we both know.<br>Scroll down — I made you something.</p>
+      <div class="scroll-cue">
+        <span></span>
+        <p>scroll</p>
+      </div>
+    </section>
+
+    <!-- CLOTHESLINE GALLERY -->
+    <section class="gallery" aria-label="Photo memories">
+      <svg class="line-svg" viewBox="0 0 1000 60" preserveAspectRatio="none">
+        <path d="M0,10 Q500,70 1000,10" fill="none" stroke="#F4C95D" stroke-width="2"/>
+      </svg>
+
+      <div class="pins">
+        <figure class="polaroid tilt-1">
+          <span class="pin"></span>
+          <img src="assets/bestfrientphoto1.jpg" alt="Memory one with Neel">
+          <figcaption>one of the first ones</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-2">
+          <span class="pin"></span>
+          <img src="assets/bestfrientphoto2.jpg" alt="Memory two with Neel">
+          <figcaption>we still talk about this day</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-3">
+          <span class="pin"></span>
+          <img src="assets/bestfrientphoto3.jpg" alt="Memory three with Neel">
+          <figcaption>this one's a core memory</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-4">
+          <span class="pin"></span>
+          <img src="assets/bestfrientphoto4.jpg" alt="Memory four with Neel">
+          <figcaption>chaos, as usual</figcaption>
+        </figure>
+
+        <figure class="polaroid tilt-5">
+          <span class="pin"></span>
+          <img src="assets/bestfrientphoto5.jpg" alt="Memory five with Neel">
+          <figcaption>my favourite one</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- LETTER -->
+    <section class="letter-section">
+      <div class="letter-card">
+        <p class="letter-tag">// a note, for you</p>
+        <p class="letter-body">
+          Dear Neel,<br><br>
+          Happy Friendship Day. I know these days you're buried in books and
+          mock tests, chasing JEE with everything you have, so I wanted to
+          take one small moment and pull you out of that for a second — just
+          to remind you that you're loved, and that someone out here is
+          rooting for you every single day.<br><br>
+          I don't know if the busy days have made you forget some of our
+          memories, the ones we made before all of this pressure began. But I
+          want you to know — I haven't forgotten a single one. Not one
+          conversation, not one laugh, not one moment. And I never will.<br><br>
+          Whatever happens, wherever life takes us, I will never forget you
+          as my best friend. That's not going to change — not with distance,
+          not with time, not with anything.<br><br>
+          Keep going, Neel. I believe in you more than you believe in
+          yourself right now. Happy Friendship Day.<br><br>
+          Yours, always.
+        </p>
+      </div>
+    </section>
+
+    <!-- MUSIC PLAYER -->
+    <section class="music-section">
+      <p class="music-tag">// our song</p>
+      <div class="player">
+        <button id="play-btn" aria-label="Play song">
+          <svg id="icon-play" viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+          <svg id="icon-pause" viewBox="0 0 24 24" width="22" height="22" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z" fill="currentColor"/></svg>
+        </button>
+        <div class="reel reel-left"><div class="reel-spin"></div></div>
+        <div class="track-info">
+          <p class="track-name">bestfriend.mp3</p>
+          <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+        <div class="reel reel-right"><div class="reel-spin"></div></div>
+      </div>
+      <audio id="bgm" src="assets/bestfriend.mp3" loop></audio>
+    </section>
+
+    <footer class="footer">
+      <svg class="thread-doodle small" viewBox="0 0 400 40" preserveAspectRatio="none">
+        <path d="M0,20 C100,0 150,40 200,20 C250,0 300,40 400,20" fill="none" stroke="#3AAFA9" stroke-width="2"/>
+      </svg>
+      <p>made with thread, polaroids, and a lot of memories 🧵</p>
+    </footer>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
